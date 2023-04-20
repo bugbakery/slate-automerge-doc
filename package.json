@@ -1,0 +1,15 @@
+{
+  "name": "slate-automerge-doc",
+  "version": "0.1.0",
+  "description": "Syncs slate with an automerge document. Bring your own transport.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["slate", "automerge", "sync", "collaboration"],
+  "author": "phlmn <info@philipp-mandler.com>",
+  "license": "AGPL-3.0-only",
+  "dependencies": {
+    "@automerge/automerge": "2.0.3-marks-prelease.1",
+    "slate": "^0.94.0"
+  }
+}

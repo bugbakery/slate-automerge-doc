@@ -1,0 +1,48 @@
+lockfileVersion: '6.0'
+
+dependencies:
+  '@automerge/automerge':
+    specifier: 2.0.3-marks-prelease.1
+    version: 2.0.3-marks-prelease.1
+  slate:
+    specifier: ^0.94.0
+    version: 0.94.0
+
+packages:
+
+  /@automerge/automerge-wasm@0.1.26-marks-prelease.1:
+    resolution: {integrity: sha512-l15yvsENRsiFm0Din2oBtLp6geNa0+b2pb2nEcMRfDecyFGZ8Kcbo6PHvw5eVbJU2IzQRl33Gb4Wd7/SNVmQfg==}
+    dev: false
+
+  /@automerge/automerge@2.0.3-marks-prelease.1:
+    resolution: {integrity: sha512-GUCkT/86+67utOvvzBV6dDYfhHeTxvr3tUwQHTJvOhwGbHKXvAZE2ewr7UwyuY6IU+MbHm6FvxKSmWjWly00lA==}
+    dependencies:
+      '@automerge/automerge-wasm': 0.1.26-marks-prelease.1
+      uuid: 9.0.0
+    dev: false
+
+  /immer@9.0.21:
+    resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
+    dev: false
+
+  /is-plain-object@5.0.0:
+    resolution: {integrity: sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
+  /slate@0.94.0:
+    resolution: {integrity: sha512-JVQ07odcLBmQHLI/MI6E6cuQ+HPpMph7Ek2Kq9CkUwW+vXoBYuCisqpXTlcvO1RyuJJOZqLQzN/jscXkaAoEjg==}
+    dependencies:
+      immer: 9.0.21
+      is-plain-object: 5.0.0
+      tiny-warning: 1.0.3
+    dev: false
+
+  /tiny-warning@1.0.3:
+    resolution: {integrity: sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==}
+    dev: false
+
+  /uuid@9.0.0:
+    resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
+    hasBin: true
+    dev: false
