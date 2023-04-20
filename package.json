@@ -21,6 +21,7 @@
   "license": "AGPL-3.0-only",
   "dependencies": {
     "@automerge/automerge": "2.0.3-marks-prelease.1",
+    "prettier": "^2.8.7",
     "slate": "^0.94.0"
   },
   "devDependencies": {
