@@ -17,7 +17,7 @@ async function run() {
   await build({
     entryPoints: files,
     outdir: outDir,
-    format: 'cjs',
+    format: 'esm',
     sourcemap: true,
   });
 }
