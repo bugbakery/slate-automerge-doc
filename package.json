@@ -15,7 +15,8 @@
     "slate",
     "automerge",
     "sync",
-    "collaboration"
+    "collaboration",
+    "crdt"
   ],
   "author": "phlmn <info@philipp-mandler.com>",
   "license": "AGPL-3.0-only",
