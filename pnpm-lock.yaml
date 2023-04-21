@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@automerge/automerge':
-    specifier: 2.0.3-marks-prelease.1
-    version: 2.0.3-marks-prelease.1
+    specifier: ^2.0.2
+    version: 2.0.2
   prettier:
     specifier: ^2.8.7
     version: 2.8.7
@@ -27,14 +27,14 @@ devDependencies:
 
 packages:
 
-  /@automerge/automerge-wasm@0.1.26-marks-prelease.1:
-    resolution: {integrity: sha512-l15yvsENRsiFm0Din2oBtLp6geNa0+b2pb2nEcMRfDecyFGZ8Kcbo6PHvw5eVbJU2IzQRl33Gb4Wd7/SNVmQfg==}
+  /@automerge/automerge-wasm@0.1.25:
+    resolution: {integrity: sha512-bTpSCkUS2/3cy2xVtpJzaf6wZla9tQhRvzq29LkNrJQ/Lp8dxLVAOZC7t1Nio4uzawTp8pIuhNlbYRM1Gh3VPA==}
     dev: false
 
-  /@automerge/automerge@2.0.3-marks-prelease.1:
-    resolution: {integrity: sha512-GUCkT/86+67utOvvzBV6dDYfhHeTxvr3tUwQHTJvOhwGbHKXvAZE2ewr7UwyuY6IU+MbHm6FvxKSmWjWly00lA==}
+  /@automerge/automerge@2.0.2:
+    resolution: {integrity: sha512-UnKOB4L/0qJ91aiVQDiN9Qf9IuigWpRs9yKC+5Z9qmCHH8AcETvv/B82FqWjkNn4bDPAJoDMhy/DG78pP+bfew==}
     dependencies:
-      '@automerge/automerge-wasm': 0.1.26-marks-prelease.1
+      '@automerge/automerge-wasm': 0.1.25
       uuid: 9.0.0
     dev: false
 
