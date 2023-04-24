@@ -42,7 +42,7 @@ function updateNode(
   }
 }
 
-type AutomergeEditorProps = {
+export type AutomergeEditor = BaseEditor & {
   isRemote: boolean;
   doc: Automerge.Doc<any>;
   onDocChange?: (doc: Automerge.Doc<any>) => void;
@@ -52,8 +52,8 @@ type AutomergeEditorProps = {
 export function withAutomergeDoc<T extends BaseEditor>(
   editor: T,
   initialDoc: Automerge.Doc<any>
-): T & AutomergeEditorProps {
-  const e = editor as T & AutomergeEditorProps;
+): T & AutomergeEditor {
+  const e = editor as T & AutomergeEditor;
   e.isRemote = false;
   e.doc = initialDoc;
 
