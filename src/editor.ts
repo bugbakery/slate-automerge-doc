@@ -1,11 +1,11 @@
-import { Transforms, Element, Editor } from "slate";
+import { Transforms, Element, Editor, BaseEditor } from "slate";
 import * as Automerge from "@automerge/automerge";
 
 import nTimes from "./utils/nTimes";
 import { applyOperation } from "./apply";
 
 function updateNode(
-  editor: Editor,
+  editor: BaseEditor,
   oldNode: Node,
   newNode: Node,
   path: number[] = []
@@ -49,7 +49,7 @@ type AutomergeEditorProps = {
   setDoc: (doc: Automerge.Doc<any>) => void;
 };
 
-export function withAutomergeDoc<T extends Editor>(
+export function withAutomergeDoc<T extends BaseEditor>(
   editor: T,
   initialDoc: Automerge.Doc<any>
 ): T & AutomergeEditorProps {
