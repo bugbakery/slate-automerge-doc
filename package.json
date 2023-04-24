@@ -32,6 +32,6 @@
     "ts-morph": "^18.0.0"
   },
   "peerDependencies": {
-    "slate": "^0.91.0"
+    "slate": ">=0.91.0"
   }
 }
