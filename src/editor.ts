@@ -5,7 +5,7 @@ import nTimes from "./utils/nTimes";
 import { applyOperation } from "./apply";
 
 function updateNode(
-  editor: BaseEditor,
+  editor: Editor,
   oldNode: Node,
   newNode: Node,
   path: number[] = []
