@@ -69,8 +69,10 @@ export function withAutomergeDoc<T extends BaseEditor>(
     e.doc = newDoc;
   };
 
-  const oldOnChange = editor.onChange;
-  e.onChange = (options) => {
+  const oldOnChange = e.onChange;
+
+  // use varargs to support future slate versions
+  e.onChange = (...args) => {
     if (!e.isRemote) {
       if (e.operations.length > 0) {
         const newDoc = Automerge.change(e.doc, (draft) => {
@@ -86,7 +88,7 @@ export function withAutomergeDoc<T extends BaseEditor>(
       }
     }
 
-    oldOnChange(options);
+    oldOnChange(...args);
   };
 
   return e;
