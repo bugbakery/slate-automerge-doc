@@ -8,7 +8,7 @@ const moveNode = (doc: SyncValue, op: MoveNodeOperation): SyncValue => {
   const [from, fromIndex] = getParentFromDoc(doc, op.path);
   const [to, toIndex] = getParentFromDoc(doc, op.newPath);
 
-  if (from.text || to.text) {
+  if ((from.text != undefined) || (to.text != undefined)) {
     throw new TypeError("Can't move node as child of a text node");
   }
 

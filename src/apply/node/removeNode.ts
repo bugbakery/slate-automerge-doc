@@ -9,7 +9,7 @@ export const removeNode = (
 ): SyncValue => {
   const [parent, index] = getParentFromDoc(doc, op.path);
 
-  if (parent.text) {
+  if (parent.text != undefined) {
     throw new TypeError("Can't remove node from text node");
   }
 

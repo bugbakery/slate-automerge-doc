@@ -1,4 +1,4 @@
-import * as Automerge from "@automerge/automerge";
+import { unstable as Automerge } from "@automerge/automerge";
 
 import { createDoc, toJS, createNode, createText } from "../utils";
 

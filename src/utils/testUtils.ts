@@ -1,7 +1,5 @@
-import * as Automerge from "@automerge/automerge";
+import { unstable as Automerge } from "@automerge/automerge";
 import { Node } from "slate";
-
-import { toSync } from "../";
 
 export const createText = (text: string = "") => ({
   text,
@@ -22,4 +20,4 @@ export const createValue = (children?: any): { children: Node[] } => ({
 });
 
 export const createDoc = (children?: any) =>
-  Automerge.from(toSync(createValue(children)));
+  Automerge.from(createValue(children));
