@@ -1,5 +1,3 @@
-import toSync from "./toSync";
-
 export * from "./testUtils";
 
 const toJS = (node: any) => {
@@ -11,9 +9,9 @@ const toJS = (node: any) => {
   }
 };
 
-const cloneNode = (node: any) => toSync(toJS(node));
+const cloneNode = (node: any) => toJS(node);
 
 const toSlatePath = (path: any) =>
   path ? path.filter((d: any) => Number.isInteger(d)) : [];
 
-export { toSync, toJS, toSlatePath, cloneNode };
+export { toJS, toSlatePath, cloneNode };
