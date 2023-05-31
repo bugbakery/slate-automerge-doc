@@ -46,27 +46,27 @@ function updateNode(
   }
 }
 
-type onDocChangeCallback = (doc: Automerge.Doc<any>) => void;
+type onDocChangeCallback<T> = (doc: Automerge.Doc<T>) => void;
 
-export type AutomergeEditor = BaseEditor & {
+export type AutomergeEditor<T> = BaseEditor & {
   isRemote: boolean;
-  doc: Automerge.Doc<any>;
-  registerOnDocChange: (callback: onDocChangeCallback) => void;
-  unregisterOnDocChange: (callback: onDocChangeCallback) => void;
-  setDoc: (doc: Automerge.Doc<any>) => void;
-  _callbacks: Set<onDocChangeCallback>;
+  doc: Automerge.Doc<T>;
+  registerOnDocChange: (callback: onDocChangeCallback<T>) => void;
+  unregisterOnDocChange: (callback: onDocChangeCallback<T>) => void;
+  setDoc: (doc: Automerge.Doc<T>) => void;
+  _callbacks: Set<onDocChangeCallback<T>>;
 };
 
-export function withAutomergeDoc<T extends BaseEditor>(
+export function withAutomergeDoc<DT, T extends BaseEditor>(
   editor: T,
   initialDoc: Automerge.Doc<any>
-): T & AutomergeEditor {
-  const e = editor as T & AutomergeEditor;
+): T & AutomergeEditor<DT> {
+  const e = editor as T & AutomergeEditor<DT>;
   e.isRemote = false;
   e.doc = initialDoc;
   e._callbacks = new Set();
 
-  function callOnDocChange(e: AutomergeEditor) {
+  function callOnDocChange(e: AutomergeEditor<DT>) {
     e._callbacks.forEach((cb) => cb(e.doc));
   }
 
