@@ -51,8 +51,8 @@ type onDocChangeCallback<T> = (doc: Automerge.Doc<T>) => void;
 export type AutomergeEditor<T> = BaseEditor & {
   isRemote: boolean;
   doc: Automerge.Doc<T>;
-  registerOnDocChange: (callback: onDocChangeCallback<T>) => void;
-  unregisterOnDocChange: (callback: onDocChangeCallback<T>) => void;
+  addDocChangeListener: (callback: onDocChangeCallback<T>) => void;
+  removeDocChangeListener: (callback: onDocChangeCallback<T>) => void;
   setDoc: (doc: Automerge.Doc<T>) => void;
   _callbacks: Set<onDocChangeCallback<T>>;
 };
@@ -70,11 +70,11 @@ export function withAutomergeDoc<DT, T extends BaseEditor>(
     e._callbacks.forEach((cb) => cb(e.doc));
   }
 
-  e.registerOnDocChange = (cb) => {
+  e.addDocChangeListener = (cb) => {
     e._callbacks.add(cb);
   };
 
-  e.unregisterOnDocChange = (cb) => {
+  e.removeDocChangeListener = (cb) => {
     e._callbacks.delete(cb);
   };
 
