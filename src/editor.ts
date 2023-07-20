@@ -99,6 +99,8 @@ export function withAutomergeDoc<DT, T extends BaseEditor>(
 
   // use varargs to support future slate versions
   e.onChange = (...args) => {
+    oldOnChange(...args);
+
     if (!e.isRemote) {
       if (e.operations.length > 0) {
         if (e.operations.some((op) => op.type != "set_selection")) {
@@ -116,8 +118,6 @@ export function withAutomergeDoc<DT, T extends BaseEditor>(
         }
       }
     }
-
-    oldOnChange(...args);
   };
 
   return e;
