@@ -1,5 +1,5 @@
-import { Transforms, Element, Editor, BaseEditor } from "slate";
-import { unstable as Automerge } from "@automerge/automerge";
+import { Transforms, Element, Editor, BaseEditor, Node } from "slate";
+import { next as Automerge } from "@automerge/automerge";
 
 import nTimes from "./utils/nTimes";
 import { applyOperation } from "./apply";

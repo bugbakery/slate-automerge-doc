@@ -1,9 +1,13 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@automerge/automerge':
-    specifier: ^2.0.3
-    version: 2.0.3
+    specifier: ^2.2.0
+    version: 2.2.0
   chokidar:
     specifier: ^3.5.3
     version: 3.5.3
@@ -44,14 +48,14 @@ packages:
       '@jridgewell/trace-mapping': 0.3.18
     dev: true
 
-  /@automerge/automerge-wasm@0.1.26:
-    resolution: {integrity: sha512-NLH7KpErTuy2O1VIA0uE+48e0u69o0qL8/9RZYjLd2uEZeWBzIWbhyDJGfUPDMIYXtkcy8z2H7h6YcwusG0BXA==}
+  /@automerge/automerge-wasm@0.15.0:
+    resolution: {integrity: sha512-LGIEw93ezooqEa4mIkTq1j2NVYnz8YT+szwAYA7FNYPdF0ii9JzK5HWIMyoT9dmsBqAgx9JnjNllyFikjPLQqg==}
     dev: false
 
-  /@automerge/automerge@2.0.3:
-    resolution: {integrity: sha512-ihfyW/pt+bmHNmPzf4nyH9OzfowAlOaK+1XD8wbtbsJeaGL/8Kap88xMO0lU3wgrddsrZtX5uTbrB/6kMl1PEA==}
+  /@automerge/automerge@2.2.0:
+    resolution: {integrity: sha512-tnMTznckXwqDN1lNh2zQLkfb+0+cE1FcwcOEWtDX7Bvs/SRjp0o9X9bsNm51ND8oDScfePiksXHKiaONxbKGWw==}
     dependencies:
-      '@automerge/automerge-wasm': 0.1.26
+      '@automerge/automerge-wasm': 0.15.0
       uuid: 9.0.0
     dev: false
 
@@ -2506,7 +2510,7 @@ packages:
       exit: 0.1.2
       graceful-fs: 4.2.11
       import-local: 3.1.0
-      jest-config: 29.5.0
+      jest-config: 29.5.0(@types/node@20.2.4)
       jest-util: 29.5.0
       jest-validate: 29.5.0
       prompts: 2.4.2
@@ -2515,44 +2519,6 @@ packages:
       - '@types/node'
       - supports-color
       - ts-node
-    dev: true
-
-  /jest-config@29.5.0:
-    resolution: {integrity: sha512-kvDUKBnNJPNBmFFOhDbm59iu1Fii1Q6SxyhXfvylq3UTHbg6o7j/g8k2dZyXWLvfdKB1vAPxNZnMgtKJcmu3kA==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    peerDependencies:
-      '@types/node': '*'
-      ts-node: '>=9.0.0'
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      ts-node:
-        optional: true
-    dependencies:
-      '@babel/core': 7.21.8
-      '@jest/test-sequencer': 29.5.0
-      '@jest/types': 29.5.0
-      babel-jest: 29.5.0(@babel/core@7.21.8)
-      chalk: 4.1.2
-      ci-info: 3.8.0
-      deepmerge: 4.3.1
-      glob: 7.2.3
-      graceful-fs: 4.2.11
-      jest-circus: 29.5.0
-      jest-environment-node: 29.5.0
-      jest-get-type: 29.4.3
-      jest-regex-util: 29.4.3
-      jest-resolve: 29.5.0
-      jest-runner: 29.5.0
-      jest-util: 29.5.0
-      jest-validate: 29.5.0
-      micromatch: 4.0.5
-      parse-json: 5.2.0
-      pretty-format: 29.5.0
-      slash: 3.0.0
-      strip-json-comments: 3.1.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /jest-config@29.5.0(@types/node@20.2.4):

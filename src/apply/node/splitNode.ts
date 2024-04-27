@@ -1,5 +1,5 @@
 import { SplitNodeOperation } from "slate";
-import { unstable as Automerge } from "@automerge/automerge";
+import { next as Automerge } from "@automerge/automerge";
 
 import { SyncValue } from "../../model";
 import { getChildren, getParentFromDoc } from "../../path";
@@ -18,7 +18,7 @@ const splitNode = (doc: SyncValue, op: SplitNodeOperation): SyncValue => {
     if (target.text.length > op.position) {
       Automerge.splice(
         target,
-        "text",
+        ["text"],
         op.position,
         target.text.length - op.position
       );

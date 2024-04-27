@@ -1,5 +1,5 @@
 import { MergeNodeOperation, Node } from "slate";
-import { unstable as Automerge } from "@automerge/automerge";
+import { next as Automerge } from "@automerge/automerge";
 
 import { SyncValue } from "../../model";
 import { getChildren, getParentFromDoc } from "../../path";
@@ -12,7 +12,7 @@ const mergeNode = (doc: SyncValue, op: MergeNodeOperation): SyncValue => {
   const next = parent[index] || parent.children[index];
 
   if (prev.text != undefined) {
-    Automerge.splice(prev, "text", prev.text.length, 0, next.text);
+    Automerge.splice(prev, ["text"], prev.text.length, 0, next.text);
   } else {
     getChildren(next).forEach((n: Node) =>
       getChildren(prev).push(cloneNode(n))
