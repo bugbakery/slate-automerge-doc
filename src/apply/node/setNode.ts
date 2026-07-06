@@ -6,13 +6,14 @@ import { getTargetFromDoc } from "../../path";
 const setNode = (doc: SyncValue, op: SetNodeOperation): SyncValue => {
   const node = getTargetFromDoc(doc, op.path);
 
-  const { newProperties } = op;
+  const { newProperties, properties } = op;
 
   for (let key in newProperties) {
     const value = newProperties[key];
-    if (value !== undefined) {
-      node[key] = value;
-    } else {
+    node[key] = value;
+  }
+  for (let key in properties) {
+    if (!(key in newProperties)) {
       delete node[key];
     }
   }
